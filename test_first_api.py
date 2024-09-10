@@ -2,10 +2,11 @@ import requests
 
 class TestFirstAPI:
     def test_hello_call(self):
+        url = "https://playground.learnqa.ru/api/hello"
         name = 'Utti'
         data = {'name': name}
 
-        response = requests.get("https://playground.learnqa.ru/api/hello", params=data)
+        response = requests.get(url, params=data)
 
         assert response.status_code == 200, "Wrong response code"
 
